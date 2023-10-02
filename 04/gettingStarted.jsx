@@ -7,8 +7,8 @@ import Header from './components/header/Header';
 import Example from './components/example/Example';
 
 ReactDOM.render(
-  <Example />,
-  document.getElementById('reactapp'),
+  <Header />,
+  document.getElementById('reactappHeader'),
 );
 
 ReactDOM.render(
