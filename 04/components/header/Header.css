@@ -3,7 +3,10 @@ div.header {
     font-family: AppleGothic, serif;
     padding: 10px;
     text-align: center;
+    color:white;
+    background-image: linear-gradient(to bottom right, teal, rebeccapurple);
+    border-style:outset;
 }
 div.header:hover {
-    transform: rotate(360deg);
+    rotate:360deg;
 }
