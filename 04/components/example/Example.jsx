@@ -24,7 +24,7 @@ class Example extends React.Component {
     this.state = {
         name: 'Shreeya',
         motto: 'You got this!',
-        inputMotto: '',
+        //inputMotto: '',
       //name: window.models.exampleModel().name,
       counter: 0,
       inputValue: '',
@@ -36,6 +36,7 @@ class Example extends React.Component {
     // generate new functions that handle the event by just calling
     // the method that handles the event.
     this.handleChangeBound = event => this.handleChange(event);
+    this.handleMottoChangeBound = event => this.handleMottoChange(event);
     // Note: A commmon idiom in React code is to use JavaScript bind() to
     // smash the method to accomplish this passthrough to the method:
     //      this.handleChange = this.handleChange.bind(this);
@@ -100,32 +101,28 @@ class Example extends React.Component {
     return retVal;
   }
   handleMottoChange(event) {
-      this.setState({inputMotto: event.target.value});
+      this.setState({motto: event.target.value});
   }
 
-  handleMottoUpdate() {
-      this.setState({motto: this.state.inputMotto, inputMotto: ''});
-  }
+  //handleMottoUpdate() {
+   //   this.setState({motto: this.state.inputMotto, inputMotto: ''});
+  //}
 
   render() {
     return (
       <div className="container Example">
         <h1>Project 4 React.js Example</h1>
 
+
         <div className="motto-update">
             <h2> {this.state.name} </h2>
             <p> {this.state.motto}</p>
         </div>
-
-          <div className="motto-input">
-              <input
-                  type = "text"
-                  placeholder= "Update Motto"
-                  value = {this.state.motto}
-                  onChange = {this.handleMottoChange}
-                  />
-              <button onClick={this.handleMottoChange}>Update</button>
+          <div>
+              <label htmlFor="mottoId">Change Motto: </label>
+              <input id="mottoId" type="text" value = {this.state.motto} onChange={this.handleChangeBound} />
           </div>
+
 
         <p>
           This view is an example of a
