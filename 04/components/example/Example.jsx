@@ -24,7 +24,7 @@ class Example extends React.Component {
     this.state = {
         name: 'Shreeya',
         motto: 'You got this!',
-        //inputMotto: '',
+        inputMotto: '',
       //name: window.models.exampleModel().name,
       counter: 0,
       inputValue: '',
@@ -101,7 +101,7 @@ class Example extends React.Component {
     return retVal;
   }
   handleMottoChange(event) {
-      this.setState({motto: event.target.value});
+      this.setState({inputMotto: event.target.value});
   }
 
   //handleMottoUpdate() {
