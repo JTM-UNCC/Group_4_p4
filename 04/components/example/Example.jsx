@@ -24,7 +24,8 @@ class Example extends React.Component {
     this.state = {
         name: 'Shreeya',
         motto: 'You got this!',
-        inputMotto: '',
+        //inputMotto: '',
+
       //name: window.models.exampleModel().name,
       counter: 0,
       inputValue: '',
@@ -73,6 +74,10 @@ class Example extends React.Component {
     this.setState({ inputValue: event.target.value });
   }
 
+  handleMottoChange(event) {
+        this.setState({motto: event.target.value});
+    }
+
   // Method called when the button is pushed
   /* eslint-disable-next-line no-unused-vars */
   handleButtonClick(buttonName, event) {
@@ -100,33 +105,28 @@ class Example extends React.Component {
 
     return retVal;
   }
-  handleMottoChange(event) {
-      this.setState({inputMotto: event.target.value});
-  }
+
 
   //handleMottoUpdate() {
-     // this.setState({motto: this.state.inputMotto, inputMotto: ''});
+    // this.setState({motto: this.state.inputMotto, inputMotto: ''});
   //}
 
   render() {
     return (
       <div className="container Example">
         <h1>Project 4 React.js Example</h1>
-
-
         <div className="motto-update">
-            <h2> {this.state.name} </h2>
-            <p> {this.state.motto}</p>
+            {this.state.name}
+            <br/>
+            {this.state.motto}
+            <hr></hr>
         </div>
           <div>
               <label htmlFor="mottoId">Change Motto: </label>
-              <input id="mottoId" type="text" value = {this.state.motto} onChange={this.handleChangeBound} />
+              <input id="mottoId" type="text" value={this.state.motto} onChange={this.handleMottoChangeBound} />
           </div>
 
-
-
-
-        <p>
+          <p>
           This view is an example of a
           &nbsp;
           <a href="https://reactjs.org/docs/react-component.html" target="_blank" rel="noopener noreferrer">
