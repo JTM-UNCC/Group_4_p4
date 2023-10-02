@@ -1,0 +1,9 @@
+div.header {
+    font-size: 35pt;
+    font-family: AppleGothic, serif;
+    padding: 10px;
+    text-align: center;
+}
+div.header:hover {
+    transform: rotate(360deg);
+}
