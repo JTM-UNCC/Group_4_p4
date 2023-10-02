@@ -104,9 +104,9 @@ class Example extends React.Component {
       this.setState({inputMotto: event.target.value});
   }
 
-  //handleMottoUpdate() {
-   //   this.setState({motto: this.state.inputMotto, inputMotto: ''});
-  //}
+  handleMottoUpdate() {
+      this.setState({motto: this.state.inputMotto, inputMotto: ''});
+  }
 
   render() {
     return (
@@ -122,6 +122,9 @@ class Example extends React.Component {
               <label htmlFor="mottoId">Change Motto: </label>
               <input id="mottoId" type="text" value = {this.state.motto} onChange={this.handleChangeBound} />
           </div>
+
+           <button onClick={this.handleMottoUpdate}>Update</button>
+
 
 
         <p>
