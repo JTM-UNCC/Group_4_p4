@@ -11,7 +11,7 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="container Header"><div className="header">Web Applications</div><div className="gradient"></div></div>
+            <div className="container Header"><div className="header">Group 4 Project 4</div></div>
         );
     }
 }
