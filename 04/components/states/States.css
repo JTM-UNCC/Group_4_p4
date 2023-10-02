@@ -4,3 +4,26 @@ CSS for the Project 4, Problem 2 States component
 Since CSS uses a global name space for classes we should use names starting with
 states- here.
 */
+
+ul {
+    list-style-type: none;
+    font-family: Tahoma, serif;
+}
+
+input {
+    border: 2px solid gray;
+    border-radius: 4px;
+    font-size: 15pt;
+    font-family: Tahoma, serif;
+    display: block;
+
+}
+
+label {
+    display: block;
+    font-family: Tahoma, Serif;
+    font-size: 16pt;
+}
+#main {
+    margin-left: 5%;
+}
