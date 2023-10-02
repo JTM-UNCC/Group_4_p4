@@ -1,0 +1,16 @@
+div.header {
+    font-size: 48pt;
+    font-family: AppleGothic, serif;
+    transition: 0.8s;
+    border: green dotted 2px;
+    padding: 10px;
+    text-align: center;
+}
+div.header:hover {
+    transform: rotateY(360deg);
+}
+
+div.gradient {
+    height: 100px;
+    background-image: linear-gradient(green, whitesmoke);
+}
