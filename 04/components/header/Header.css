@@ -6,7 +6,9 @@ div.header {
     color:white;
     background-image: linear-gradient(to bottom right, teal, rebeccapurple);
     border-style:outset;
+    border-width:7px;
+    transition: 0.8s;
 }
 div.header:hover {
-    rotate:360deg;
+    rotate:180deg;
 }
