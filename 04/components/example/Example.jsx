@@ -22,7 +22,10 @@ class Example extends React.Component {
     // We can initialize it here.
     // We read the example model data into the state variable 'name'
     this.state = {
-      name: window.models.exampleModel().name,
+        name: 'Shreeya',
+        motto: 'You got this!',
+        inputMotto: '',
+      //name: window.models.exampleModel().name,
       counter: 0,
       inputValue: '',
       buttonWasClicked: '',
@@ -96,6 +99,13 @@ class Example extends React.Component {
 
     return retVal;
   }
+  handleMottoChange(event) {
+      this.setState({inputMotto: event.target.value});
+  }
+
+  handleMottoUpdate() {
+      this.setState({motto: this.state.inputMotto, inputMotto: ''});
+  }
 
   render() {
     return (
@@ -103,8 +113,19 @@ class Example extends React.Component {
         <h1>Project 4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
+            <h2> {this.state.name} </h2>
+            <p> {this.state.motto}</p>
         </div>
+
+          <div className="motto-input">
+              <input
+                  type = "text"
+                  placeholder= "Update Motto"
+                  value = {this.state.motto}
+                  onChange = {this.handleMottoChange}
+                  />
+              <button onClick={this.handleMottoChange}>Update</button>
+          </div>
 
         <p>
           This view is an example of a
